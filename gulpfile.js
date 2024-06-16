@@ -87,6 +87,10 @@ const watch = function () {
   gulp.watch("src/img/**/*.{png,jpg,jpeg}", gulp.parallel(webpImages));
 };
 
+const build = gulp.series(
+  gulp.parallel(styles, html, scripts, fonts, icons, images, webpImages)
+);
+
 exports.server = server;
 exports.styles = styles;
 exports.html = html;
@@ -96,6 +100,7 @@ exports.icons = icons;
 exports.images = images;
 exports.webpImages = webpImages;
 exports.watch = watch;
+exports.build = build;
 
 exports.default = gulp.parallel(
   watch,
