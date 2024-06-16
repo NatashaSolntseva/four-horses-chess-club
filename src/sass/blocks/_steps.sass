@@ -1,5 +1,5 @@
 .steps
-    margin-bottom: 200px
+    margin-bottom: 202px
     @include xxs
             margin-bottom: 120px    
     &__title
@@ -25,13 +25,14 @@
         color: $bright-color-3
         text-transform: none
         max-width: 280px
+        padding-left: 6px
         @include xxs
             font-size: 18px
             max-width: 335px
             padding-top: 12px
     &__container
         display: grid
-        grid-template-rows: repeat(3, 1fr)
+        grid-template-rows: repeat(3, auto)
         grid-template-columns: repeat(3, 1fr) 
         gap: 20px
         position: relative
@@ -52,8 +53,8 @@
         width: 401px
         height: 235px
         position: absolute
-        bottom: -5px
-        right: -40px
+        bottom: -2px
+        right: -43px
         z-index: 666        
         @include md
             top: -33px
@@ -72,6 +73,7 @@
         display: flex
         gap: 16px       
         background-image: url('../img/card_bg.webp')
+        min-height: 112px
         scroll-snap-align: start
         @include xxs
             padding: 62px 20px 28px        
