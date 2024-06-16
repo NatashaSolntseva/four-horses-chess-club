@@ -16,7 +16,7 @@
         @include xs
             margin-bottom: 150px            
         @include xxs 
-            max-width: 335px       
+            max-width: 335px             
     &__title_size_small
         display: inline-block
         font-family: $golos-reg
@@ -67,7 +67,19 @@
             top: 88px
             left: 28px
         @include xxs           
-            top: 205px                   
+            top: 205px
+        @include xxxs
+            display: none    
+    &__img-mobile
+        display: none                           
+        @include xxxs
+            width: 335px
+            height: 182px
+            position: absolute
+            top: 183px
+            left: 30px
+            z-index: 666  
+            display: flex
     &__card
         padding: 20px
         display: flex

@@ -3,7 +3,7 @@
     width: 100%
     border-collapse: collapse
     @include xxs
-        margin-block: 44px 40px
+        margin-block: 44px 28px
     &__row
         border-bottom: 2px solid $border
         vertical-align: baseline
@@ -15,7 +15,9 @@
         &:first-child .table__cell 
             padding-top: 0               
         &:last-child .table__cell 
-            padding-bottom: 0      
+            padding-bottom: 0
+            @include xs
+                padding-bottom: 13px      
     &__row_direction_row
         @include xxs
             flex-direction: row
@@ -46,7 +48,7 @@
         @include xxs
             border-left:  none
             padding-left: 0
-            padding-bottom: 16px            
+            padding-bottom: 13px            
     &__text_type_strikethrough                 
         text-decoration: line-through
         text-decoration-color: $bright-color-2

@@ -1,7 +1,7 @@
 .helpus
     padding-block: 80px 186px
     @include xxs
-        padding-block: 48px 120px
+        padding-block: 48px 125px
     &__top-row-item
         display: flex        
         align-items: center
@@ -13,6 +13,8 @@
         gap: 17px
         @include sm
             flex-direction: column
+        @include xxs
+            gap: 9px    
     &__bottom-row-content                    
         width: 100%       
     &__title
@@ -22,9 +24,7 @@
         color: $text-main
         max-width: 764px        
         @include sm
-            align-self: flex-start
-    // &__title_position_down
-    //     margin-block: 5px 70px            
+            align-self: flex-start        
     &__title_accent 
         font-family: $merriweather-b   
         color: $bright-color-2
@@ -32,7 +32,9 @@
     &__title-gap    
         @include sm
             display: block
-            padding-top: 300px    
+            padding-top: 300px
+        @include xxxs
+            padding-top: 263px    
     &__img
         width: 394px
         height: 250px
@@ -62,7 +64,9 @@
             object-fit: cover
         @include xxs
             width: 375px
-            height: auto 
+            height: auto
+            margin-top: -33px
+            margin-left: 0
 
     &__note-text
         font-family: $golos-reg

@@ -5,12 +5,15 @@
     gap: 3px
     z-index: 5    
     transition: rotate 0.3s ease-in-out
-    @include xxs
-        gap: 4px       
+    &__icons
+        @include xxs
+            display: flex
+            gap: 1px           
     &__icon
         @include xxs
             width: 19px
             height: 27px
+            
 
     &__text
         text-transform: uppercase
