@@ -4,7 +4,6 @@
 @import 'base/mixins'
 @import 'base/keyframes'
 @import 'blocks/header'
-@import 'blocks/main'
 @import 'blocks/footer'
 @import 'blocks/logo'
 @import 'blocks/promo'
@@ -58,6 +57,8 @@ button
     background-color: transparent
     border: none
     cursor: pointer
+    outline: none
+    -webkit-tap-highlight-color: transparent
 
 h1, h2, h3, h4 
     margin: 0
@@ -86,6 +87,7 @@ li
 a
     text-decoration: none
     cursor: pointer
+    -webkit-tap-highlight-color: transparent
 
 th 
     font-weight: normal  
