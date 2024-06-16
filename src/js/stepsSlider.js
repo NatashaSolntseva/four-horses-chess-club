@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const arrowBtnLeft = document.getElementById("prevStepsBtn");
   const arrowBtnRight = document.getElementById("nextStepsBtn");
   const paginationDots = document.querySelectorAll(".mobile-nav__dot");
-  console.log("paginationDots", paginationDots);
 
   const updateArrowBtnsState = () => {
     if (slider.scrollLeft === 0) {

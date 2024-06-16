@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const sliderCounter = document.getElementById("sliderCounter");
 
   const totalCards = slider.children.length;
-  const cardsPerSlide = 3;
+  let cardsPerSlide = 3;
   let currentIndex = 0;
   let timerId = null;
 
@@ -26,10 +26,18 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   const nextSlide = () => {
-    if (currentIndex < totalCards - cardsPerSlide) {
-      currentIndex += cardsPerSlide;
-    } else {
+    currentIndex += cardsPerSlide;
+    if (currentIndex >= totalCards) {
       currentIndex = 0;
+    }
+    updateSliderPosition();
+  };
+
+  const prevSlide = () => {
+    currentIndex -= cardsPerSlide;
+    if (currentIndex < 0) {
+      currentIndex =
+        Math.ceil(totalCards / cardsPerSlide) * cardsPerSlide - cardsPerSlide;
     }
     updateSliderPosition();
   };
@@ -50,15 +58,24 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex -= cardsPerSlide;
-      updateSliderPosition();
-    }
-
+    prevSlide();
     stopAutoSlide();
   });
 
-  startAutoSlide();
+  const handleResize = () => {
+    if (window.matchMedia("(max-width: 576px)").matches) {
+      cardsPerSlide = 1;
+    } else if (window.matchMedia("(max-width: 900px)").matches) {
+      cardsPerSlide = 2;
+    } else {
+      cardsPerSlide = 3;
+    }
+    updateSliderPosition();
+  };
 
+  handleResize();
+  startAutoSlide();
   updateCounter();
+
+  window.addEventListener("resize", handleResize);
 });
