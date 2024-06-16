@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const dotImageSrc = "icons/dot.svg";
 
-  const section = document.querySelector(".line");
+  const sections = document.querySelectorAll(".line");
 
   function createList(contentData, dotImageSrc) {
     const ul = document.createElement("ul");
@@ -31,14 +31,15 @@ window.addEventListener("DOMContentLoaded", () => {
       ul.appendChild(liTextItem);
       ul.appendChild(liDot);
     });
-
     return ul;
   }
 
-  const firstList = createList(contentData, dotImageSrc);
-  const secondList = createList(contentData, dotImageSrc);
-  secondList.setAttribute("aria-hidden", "true");
+  sections.forEach((section) => {
+    const firstList = createList(contentData, dotImageSrc);
+    const secondList = createList(contentData, dotImageSrc);
+    secondList.setAttribute("aria-hidden", "true");
 
-  section.appendChild(firstList);
-  section.appendChild(secondList);
+    section.appendChild(firstList);
+    section.appendChild(secondList);
+  });
 });
