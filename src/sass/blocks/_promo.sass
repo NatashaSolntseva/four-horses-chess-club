@@ -1,0 +1,62 @@
+.promo
+    position: relative
+    padding-block: 162px 150px
+    background-image: image-set(url('../img/bg-preview2.webp') type('image/webp'),url('../img/bg-preview2.jpg'))
+    background-position: top
+    background-repeat: no-repeat    
+    background-size: auto 100%
+    @include xxxs
+            padding-block: 90px 270px
+            background-image: image-set(url('../img/bg-preview-mobile2.webp') type('image/webp'), url('../img/bg-preview-mobile2.png'))                                 
+            // background-position-x: 80%
+            background-size: 100%
+
+    &::after
+        position: absolute
+        content:  ''
+        inset: 0
+        background-image: image-set(url('../img/bg-preview-osn.webp') type('image/webp'), url('../img/bg-preview-osn.avif') type('image/avif'), url('../img/bg-preview-osn.jpg'))
+        z-index: -1
+        @include xxxs
+            display: none
+
+    &__content
+        display: flex
+        flex-direction: column
+        text-align: left       
+        width: 542px
+        @include xxs
+            width: 100%
+    &__title
+        text-transform: uppercase
+        font-family: $merriweather-r
+        font-size: 60px
+        color: $text-main
+        margin-bottom: 24px    
+        display: flex
+        flex-direction: column        
+        @include xxs
+            font-size: 36px                 
+    &__title_position        
+        text-align: center
+        align-self: center
+    &__text
+        margin-bottom: 40px 
+        width: 500px
+        text-align: center
+        font-family: $golos-reg
+        font-size: 18px
+        color: $text-main
+        line-height: 130%
+
+        @include xxs            
+            width: 100%
+            font-size: 18px
+            margin-bottom: 32px 
+            text-align: left    
+    &__btn-wrapper
+        display: flex
+        gap: 16px
+
+        @include xxs            
+            flex-direction: column  

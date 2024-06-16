@@ -1,0 +1,33 @@
+.line
+    background-color: $bright-color-2
+    padding-block: 18px 
+    overflow: hidden   
+    width: 100%
+    display: flex
+    align-items: center
+    white-space: nowrap
+    @include xxs
+        padding-block: 10px
+
+    &__content
+        position: relative
+        width: 100%
+        display: flex
+        gap: 12px
+        width: max-content
+        animation: run 30s linear infinite
+    &__text-item
+        text-transform: uppercase
+        font-family: $golos-reg
+        font-size: 18px
+        color: $text-hover
+        @include xxs 
+                font-size: 16px
+
+@keyframes run
+    0%
+        transform: translateX(-60%)
+    50%
+        transform: translateX(0%)
+    100%
+        transform: translateX(-60%)

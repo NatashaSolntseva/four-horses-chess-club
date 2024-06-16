@@ -1,0 +1,68 @@
+.slider
+    display: flex
+    gap: 20px    
+    // width: 100%
+    transition: transform 0.5s ease-in-out
+    &__nav
+        display: flex
+        align-items: center
+        gap: 16px
+        @include xs
+            position: absolute
+            bottom: -60px
+            left: 50%
+            transform: translateX(-50%)
+    &__nav-btn
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        background-color: $text-main
+        width: 44px
+        height: 44px
+        color: $text-hover
+        transition: background-color 0.3s ease-in-out
+        &:hover
+            background-color: $bright-color-1
+        &:disabled 
+            background-color: gray
+            cursor: not-allowed  
+        @include xxs
+            width: 36px
+            height: 36px
+            
+    &__nav-btn_type_next  
+        transform: rotate(180deg)
+    &__card
+        min-width: 394px         
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-bottom: 40px
+        // padding-inline: 37px
+        
+        @include xxs
+            min-width: 335px
+            flex: 0 0 calc(100% - 20px)  
+    &__card-img
+        height: 320px
+        margin-bottom: 28px
+        img
+            height: 100%
+            object-fit: cover
+        @include xxs
+            height: 244px
+    &__card-name
+        font-family: $golos-sb
+        font-size: 24px
+        line-height: 120%
+        color: $text-main
+        margin-bottom: 6px  
+        
+    &__card-description 
+        font-family: $golos-reg
+        font-size: 20px
+        line-height: 120%
+        color: $text-main   
+        margin-bottom: 20px
+        opacity: 0.6      

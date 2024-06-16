@@ -1,0 +1,43 @@
+.table
+    margin-top: 60px 
+    width: 100%
+    border-collapse: collapse
+    @include xxs
+        margin-top: 44px 
+    &__row
+        border-bottom: 2px solid $border
+        vertical-align: baseline
+        @include xxs
+            display: flex
+            flex-direction: column
+            &:last-child 
+                border-bottom: none       
+    &__row_direction_row
+        @include xxs
+            flex-direction: row
+            align-items: center
+    &__row_direction_row td
+        @include xxs
+            padding: 16px 0 12px 12px          
+    &__cell
+        display: flex        
+        padding: 16px 16px 12px 0 
+        white-space: nowrap
+        @include xxs
+            padding: 16px 0 12px 
+    &__text
+        font-family: $golos-reg
+        font-size: 20px
+        color: $text-main        
+    &__text_type_bold
+        font-family: $golos-sb
+        padding-left: 16px
+        border-left:  2px solid $border
+        @include xxs
+            border-left:  none
+            padding-left: 0
+            padding-bottom: 16px            
+    &__text_type_strikethrough                 
+        text-decoration: line-through
+        text-decoration-color: $bright-color-2
+        text-decoration-thickness: 2px
