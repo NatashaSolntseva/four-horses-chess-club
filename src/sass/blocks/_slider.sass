@@ -20,7 +20,7 @@
         width: 44px
         height: 44px
         color: $text-hover
-        transition: background-color 0.3s ease-in-out
+        transition: background-color 0.3s ease-in-out        
         &:hover
             background-color: $bright-color-1
         &:disabled 
@@ -29,9 +29,20 @@
         @include xxs
             width: 36px
             height: 36px
-            
-    &__nav-btn_type_next  
-        transform: rotate(180deg)
+        img
+            width:  12px
+            height: 20px
+            margin-right: 3px              
+            @include xxs
+                width:  10px
+                height: 18px                
+    &__nav-btn_type_next        
+        img   
+            transform: rotate(180deg)                     
+            margin-left: 3px
+            margin-right: 0           
+    &__nav-btn-next-arr
+        transform: rotate(180deg)     
     &__card
         min-width: 394px         
         display: flex
