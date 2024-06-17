@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const paginationDots = document.querySelectorAll(".mobile-nav__dot");
 
   const updateArrowBtnsState = () => {
+    // console.log("slider.scrollLeft", slider.scrollLeft);
     if (slider.scrollLeft === 0) {
       arrowBtnLeft.setAttribute("disabled", "true");
     } else {
       arrowBtnLeft.removeAttribute("disabled");
     }
-
+    // console.log("slider.offsetWidth", slider.offsetWidth);
+    // console.log("slider.scrollWidth", slider.scrollWidth);
     if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
       arrowBtnRight.setAttribute("disabled", "true");
     } else {
@@ -37,6 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       slider.scrollLeft +=
         btn.id === "prevStepsBtn" ? -firstCardWidth - 20 : firstCardWidth + 20;
+      updateArrowBtnsState();
+      updatePaginationDots();
+    });
+  });
+
+  paginationDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      slider.scrollLeft = index * (firstCardWidth + 20);
       updateArrowBtnsState();
       updatePaginationDots();
     });
