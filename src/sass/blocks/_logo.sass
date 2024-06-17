@@ -1,0 +1,28 @@
+.logo
+    position: relative
+    display: flex
+    align-items: center
+    gap: 3px
+    z-index: 5    
+    transition: rotate 0.3s ease-in-out
+    &__icons
+        @include xxs
+            display: flex
+            gap: 1px           
+    &__icon
+        @include xxs
+            width: 19px
+            height: 27px
+            
+
+    &__text
+        text-transform: uppercase
+        font-family: $golos-b
+        font-size: 16px
+        color: $text-logo
+        @include xxs
+            font-size: 14.4px
+
+    img       
+        &:hover
+            transform: rotate(20deg)    

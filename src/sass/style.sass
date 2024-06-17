@@ -1,0 +1,114 @@
+@import 'libs/normalize'
+@import 'base/fonts'
+@import 'base/variables'
+@import 'base/mixins'
+@import 'base/keyframes'
+@import 'blocks/header'
+@import 'blocks/footer'
+@import 'blocks/logo'
+@import 'blocks/promo'
+@import 'blocks/line'
+@import 'blocks/btn'
+@import 'blocks/helpus'
+@import 'blocks/btn-secondary'
+@import 'blocks/table'
+@import 'blocks/steps'
+@import 'blocks/slider'
+@import 'blocks/participants'
+@import 'blocks/mobile-nav'
+
+
+body 
+    margin: 0
+    display: flex
+    flex-direction: column
+    background: $main-bg
+    font-family: $golos-reg
+    color: $text-main
+    font-size: 16px
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    min-height: 100vh
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    &.locked 
+        overflow: hidden
+    @include sm 
+        font-size: 16px
+    
+
+
+* 
+    box-sizing: border-box
+    margin: 0
+
+
+html 
+    scroll-behavior: smooth
+
+
+header 
+    padding: 0
+
+button
+    padding: 0
+    background-color: transparent
+    border: none
+    cursor: pointer
+    outline: none
+    -webkit-tap-highlight-color: transparent
+
+h1, h2, h3, h4 
+    margin: 0
+    font-weight: normal
+
+img
+    width: auto 
+    max-width: 100%
+    height: auto
+
+iframe, img, svg, video
+    max-width: 100%
+    vertical-align: top
+    height: auto
+
+p
+    margin: 0
+
+ul
+    margin: 0
+    padding-left: 0
+
+li
+    list-style-type: none
+
+a
+    text-decoration: none
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent
+
+th 
+    font-weight: normal  
+    padding: 0
+    margin: 0
+    border: none
+    background: none
+    color: inherit   
+    
+.container 
+    max-width: 1262px
+    margin: 0 auto
+    padding: 0 20px
+    position: relative
+    @media(max-width: 576px) 
+        padding: 0 20px
+        
+
+.section-title
+    font-family: $merriweather-r
+    font-size: 36px
+    line-height: 135%
+    @include xxs
+        font-size: 28px

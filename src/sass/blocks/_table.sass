@@ -1,0 +1,55 @@
+.table
+    margin-block: 58px 49px  
+    width: 100%
+    border-collapse: collapse
+    @include xxs
+        margin-block: 44px 28px
+    &__row
+        border-bottom: 2px solid $border
+        vertical-align: baseline
+        &:last-child 
+                border-bottom: none 
+        @include xxs
+            display: flex
+            flex-direction: column 
+        &:first-child .table__cell 
+            padding-top: 0               
+        &:last-child .table__cell 
+            padding-bottom: 0
+            @include xs
+                padding-bottom: 13px      
+    &__row_direction_row
+        @include xxs
+            flex-direction: row
+            align-items: center
+    &__row_direction_row td
+        @include xxs
+            padding: 16px 0 12px 12px          
+    &__cell
+        display: flex        
+        padding: 16px 16px 14px 0 
+        width: fit-content
+        white-space: nowrap
+        @include xxs
+            padding: 16px 0 12px
+    &__second-cell         
+        width: 100%
+    &__text
+        font-family: $golos-reg
+        font-size: 20px
+        line-height: 120%
+        color: $text-main  
+        opacity: 0.7      
+    &__text_type_bold
+        font-family: $golos-sb
+        padding-left: 16px
+        border-left:  2px solid $border
+        opacity: 1
+        @include xxs
+            border-left:  none
+            padding-left: 0
+            padding-bottom: 13px            
+    &__text_type_strikethrough                 
+        text-decoration: line-through
+        text-decoration-color: $bright-color-2
+        text-decoration-thickness: 2px

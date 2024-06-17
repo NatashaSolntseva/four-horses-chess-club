@@ -1,0 +1,67 @@
+.promo
+    position: relative
+    padding-block: 123px 130px
+    background-image: image-set(url('../img/bg-preview.webp') type('image/webp'),url('../img/bg-preview.jpg'))
+    background-position: top
+    background-repeat: no-repeat    
+    background-size: auto 100%
+    @include xxxs
+            padding-block: 91px 288px
+            background-image: image-set(url('../img/bg-preview-mobile.webp') type('image/webp'), url('../img/bg-preview-mobile.jpg'))                            
+            background-position: bottom
+            background-size: 100%
+
+    &::after
+        position: absolute
+        content:  ''
+        inset: 0
+        background-image: image-set(url('../img/bg-preview-osn.webp') type('image/webp'), url('../img/bg-preview-osn.avif') type('image/avif'), url('../img/bg-preview-osn.jpg'))
+        z-index: -1
+        @include xxxs
+            display: none
+
+    &__content
+        display: flex
+        flex-direction: column
+        text-align: left       
+        width: 542px
+        @include xxs
+            width: 100%
+    &__title
+        text-transform: uppercase
+        font-family: $merriweather-r
+        font-size: 60px
+        line-height: 110%
+        color: $text-main
+        margin-bottom: 24px    
+        display: flex
+        flex-direction: column        
+        @include xxs
+            font-size: 36px                 
+    &__title_position        
+        text-align: center
+        align-self: center
+        @include xxs
+            padding-left: 6px
+    &__text
+        margin-bottom: 40px 
+        width: 500px
+        text-align: center
+        font-family: $golos-reg
+        font-size: 18px
+        color: $text-main
+        line-height: 130%
+        margin-left: 20px
+
+        @include xxs            
+            width: 100%
+            font-size: 18px
+            margin-bottom: 32px 
+            margin-left: 0
+            text-align: left    
+    &__btn-wrapper
+        display: flex
+        gap: 16px
+
+        @include xxs            
+            flex-direction: column  

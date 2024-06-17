@@ -1,0 +1,24 @@
+.mobile-nav
+    display: none
+    @include xxs
+        margin: 28px auto 0  
+        width: fit-content      
+        display: flex
+        gap: 16px
+    &__pagination    
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 6px
+    &__dot    
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: $inactive-color
+        cursor: pointer
+        transition: background-color 0.3s ease-in-out
+        &:hover
+            background-color: $text-main
+    &__dot.active
+        background-color: $text-main
+        transition: background-color 0.3s ease-in-out        
