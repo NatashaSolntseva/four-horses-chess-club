@@ -52,14 +52,22 @@ window.addEventListener("DOMContentLoaded", () => {
     clearInterval(timerId);
   };
 
+  const resetAutoSlide = () => {
+    clearTimeout(timeoutId);
+    stopAutoSlide();
+    timeoutId = setTimeout(() => {
+      startAutoSlide();
+    }, 4000);
+  };
+
   nextBtn.addEventListener("click", () => {
     nextSlide();
-    stopAutoSlide();
+    resetAutoSlide();
   });
 
   prevBtn.addEventListener("click", () => {
     prevSlide();
-    stopAutoSlide();
+    resetAutoSlide();
   });
 
   const handleResize = () => {
